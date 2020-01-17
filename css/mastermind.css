@@ -1,0 +1,157 @@
+@CHARSET "UTF-8";
+
+header, nav, footer, article {
+	display : block ;
+	/*outline: 1px solid red;*/
+}
+
+body {
+	font-family: Calibri, Verdana, Geneva, sans-serif;
+}
+
+div#container {
+	width: 830px;
+	margin: 0 auto;
+}
+
+header {
+	height: 128px;
+	background: #666;
+	border: 1px solid darkgray;
+}
+
+header img {
+	float: left; 
+	margin-right: 25px;
+	height: 128px;
+}
+
+header h1 {
+	font-size: 2em;
+	font-style: italic;
+	padding: 6px 0 0;
+	margin: 0;
+	color: #ccc;
+	color: rgba(255,255,255,0.8);
+}
+
+header p {
+	font-size: 1.5em;
+	margin: 0;
+	color #222;
+	color: rgba(0,0,0,0.3);
+}
+
+header p#status {
+	font-size: 1.5em;
+	margin: 10px 0 0;
+	color: #fff;
+	color: rgba(255,255,255,1);
+}
+
+aside {
+	float: left;
+	clear: left;
+	width: 57px;
+	margin-right: 20px;
+	height: 112px;
+	background: #666;
+	border: 1px solid darkgray;
+}
+
+aside > div {
+	margin-left: 8px;
+	margin-top: 14px;
+}
+
+article {
+	float: left;
+}
+
+section, footer {
+	float: left;
+	clear: left;
+	width: 828px;
+	border: 1px solid darkgray;
+}
+
+footer {
+	width: 750px;
+	height: 112px;
+	padding-left: 78px;
+	background: #666;
+	border: 1px solid darkgray;
+}
+
+footer span {
+	font-size: 2.5em;
+	font-weight: bold;
+	margin-top: 16px;
+	margin-left: 33px;
+        display: inline-block;
+}
+
+.smallcircle {
+	float: left;
+	margin: 5px;
+	border: 1px solid black;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px; 
+}
+
+.circle, .playcircle {
+	float: left;
+	margin: 10px;
+	border: 1px solid black;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px; 
+}
+
+.circle, .playcircle {
+	margin-left: 27px;
+	margin-right: 27px;
+}
+
+.playcircle select {
+	margin: 0;
+	height: 90px;
+        width: 90px;
+        border-radius: 40px;
+        border: 1px solid black;
+}
+
+#knop {
+	float: left;
+	margin-top: 24px;
+	margin-left: 20px;
+}
+
+#zwart, #ZWART {
+	background-color: black;
+}
+
+#wit, #WIT {
+	background-color: white;
+}
+
+#ROOD {
+	background-color: red;
+}
+
+#GROEN {
+	background-color: green;
+}
+
+#BLAUW {
+	background-color: blue;
+}
+
+#GEEL {
+	background-color: yellow;
+}
+
+#BRUIN {
+	background-color: brown;
+}
