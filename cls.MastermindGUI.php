@@ -1,6 +1,7 @@
 <?php
 
 require_once("cls.Mastermind.php");
+require_once("cls.MastermindConstants.php");
 
 class MastermindGUI {
 	const TITEL = "Mastermind";
@@ -35,8 +36,8 @@ class MastermindGUI {
 		echo "<div id=\"container\">\n";
 		echo "<header>\n";
 		echo "<img src=\"images/mastermind.jpeg\">\n";
-		echo "<h1>MASTERMIND</h1>\n";
-		echo "<p>Easy to learn, easy to play, not so easy to win</p>\n";
+		echo "<h1>".MastermindConstants::TITLE."</h1>\n";
+		echo "<p>".MastermindConstants::SUBTITLE."</p>\n";
 		echo "<p id=\"status\">Het spel is ".$this->model->getStatus()."</p>\n";
 		echo "</header>\n";
 		echo "<form action=\"\" method=\"post\">\n";
@@ -45,27 +46,31 @@ class MastermindGUI {
 	
 	private function toonFooter() {
 		echo "</form>\n";
+		echo "<footer>\n";
+		echo "<p id=\"maker\">".MastermindConstants::MAKER."</p>\n";
+		echo "<p id=\"info\">".MastermindConstants::INFO."</p>\n";
+		echo "</footer>\n";
 		echo "</div>\n";
 		echo "</body>\n";
 		echo "</html>\n";
 	}
 	
 	private function toonCode() {
-		echo "<footer>\n";
+		echo "<section id=\"footer\">\n";
 		if ($this->model->getStatus()->getSleutel()!=SpelStatus::BEZIG) {
 			$id = "";
 			for ($i=0; $i<4; $i++) {
 				$id = "id=\"".$this->model->getCode()->getKleur($i)."\"";
 				echo "<div class=\"circle\" $id></div>\n";
 			}
-			echo "<div id=\"knop\"><input type=\"submit\" value=\"Speel opnieuw\" name=\"speel\"></div>\n";
+			echo "<div id=\"knop\"><input type=\"submit\" value=\"".MastermindConstants::RESTART."\" name=\"speel\"></div>\n";
 		} else {
 			for ($i=0; $i<4; $i++) {
 				echo "<div class=\"circle\"><span>?</span></div>\n";
 			}
-			echo "<div id=\"knop\"><input type=\"submit\" value=\"Toon code\" name=\"toon\"></div>\n";
+			echo "<div id=\"knop\"><input type=\"submit\" value=\"".MastermindConstants::SHOW."\" name=\"toon\"></div>\n";
 		}
-		echo "</footer>\n";
+		echo "</section>\n";
 	}
 	
 	private function toonRijen() {
@@ -114,7 +119,7 @@ class MastermindGUI {
 			}
 		}
 		if ($positie==$this->model->getPositie()) {
-			echo "<div id=\"knop\"><input type=\"submit\" value=\"Zet kleuren\" name=\"zet\"></div>\n";
+			echo "<div id=\"knop\"><input type=\"submit\" value=\"".MastermindConstants::INPUT."\" name=\"zet\"></div>\n";
 		}
 		echo "</article>\n";
 	}
