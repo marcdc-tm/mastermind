@@ -55,8 +55,8 @@ aside {
 	width: 57px;
 	margin-right: 20px;
 	height: 112px;
-	background: #666;
-	border: 1px solid darkgray;
+	background: #888;
+	border: 1px solid lightgray;
 }
 
 aside > div {
