@@ -9,5 +9,6 @@ class MastermindConstants {
 	const INPUT = "Zet kleuren";
 	const MAKER = "Thomas More &copy; 2020";
 	const INFO = "Workshop Graduaat Programmeren";
+	const PRESTATUS = "Het spel is";
 
 }

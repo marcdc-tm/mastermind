@@ -38,7 +38,7 @@ class MastermindGUI {
 		echo "<img src=\"images/mastermind.jpeg\">\n";
 		echo "<h1>".MastermindConstants::TITLE."</h1>\n";
 		echo "<p>".MastermindConstants::SUBTITLE."</p>\n";
-		echo "<p id=\"status\">Het spel is ".$this->model->getStatus()."</p>\n";
+		echo "<p id=\"status\">".MastermindConstants::PRESTATUS." ".$this->model->getStatus()."</p>\n";
 		echo "</header>\n";
 		echo "<form action=\"\" method=\"post\">\n";
 		echo "<input type=\"hidden\" name=\"model\" value=\"".base64_encode(serialize($this->model))."\" />\n";
